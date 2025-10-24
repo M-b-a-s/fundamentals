@@ -136,4 +136,15 @@ public class Greetings {
     }
 
 
+    /* ===== STATIC VS INSTANCE METHODS */
+    // Static methods belong to the class and can be called without creating an instance of the class.
+    // Instance methods belong to an instance of the class and require an object to be created before they can be called.
+
+    // Make some methods static (generalGreeting()), others instance-based (personalGreeting()).
+    public static void generalGreeting() {
+        System.out.println("Hello, everyone!");
+    }
+    public void personalGreeting(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
 }
