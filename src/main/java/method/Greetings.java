@@ -34,8 +34,11 @@ public class Greetings {
         // String timeBasedGreeting = getGreetingBasedOnTime(10);
         // System.out.println(timeBasedGreeting);
 
+        // Greetings greeter = new Greetings();
+        // System.out.println(greeter.getGreetingCount());
+
         Greetings greeter = new Greetings();
-        System.out.println(greeter.getGreetingCount());
+        System.out.println(greeter.getRandomGreeting());
     }
 
     /** ===== SIMPLE GREETINGS ===== */
@@ -147,4 +150,14 @@ public class Greetings {
     public void personalGreeting(String name) {
         System.out.println("Hello, " + name + "!");
     }
+
+    /** ===== RANDOM GREETING GENERATOR ===== */
+    // Store 5 greetings in an array or ArrayList.
+    private String[] greetings = {"Hello, everyone!", "Good morning, everyone!", "Good afternoon, everyone!", "Good evening, everyone!", "Good night, everyone!"};
+    // Create a method getRandomGreeting() that picks one randomly.
+    public String getRandomGreeting() {
+        int index = (int) (Math.random() * greetings.length);
+        return greetings[index];
+    }
+
 }
