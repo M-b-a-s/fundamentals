@@ -15,6 +15,25 @@ import java.util.Scanner;
  * 
  */
 public class Classes {
-    
+    public static void main(String[] args) {
 
+        Classes calculator = new Classes();
+        // Create instances of the Rectangle class
+        Rectangle bedroom = calculator.getRoom();
+        Rectangle bathroom = calculator.getRoom();
+    }
+
+    // Static is used when you want to access a method or variable without creating an instance of the class
+    public Rectangle getRoom() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter length of your room: ");
+        double length = scanner.nextDouble();
+
+        System.out.println("Enter width of your room: ");
+        double width = scanner.nextDouble();
+        scanner.close();
+
+        return new Rectangle(length, width);
+        
+    }
 }
