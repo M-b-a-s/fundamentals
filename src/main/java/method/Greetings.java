@@ -31,8 +31,11 @@ public class Greetings {
         // boolean isLong = isLongGreeting("Hello, this is a very long greeting message!");
         // System.out.println("Is the greeting long? " + isLong);
 
-        String timeBasedGreeting = getGreetingBasedOnTime(10);
-        System.out.println(timeBasedGreeting);
+        // String timeBasedGreeting = getGreetingBasedOnTime(10);
+        // System.out.println(timeBasedGreeting);
+
+        Greetings greeter = new Greetings();
+        System.out.println(greeter.getGreetingCount());
     }
 
     /** ===== SIMPLE GREETINGS ===== */
@@ -114,6 +117,23 @@ public class Greetings {
         }
     }
 
+    /** ===== GREETING STATISTICS ====== */
+    //Add a field private int greetingCount;
+    private int greetingCount = 0;
+    // incrementGreetingCount()
+    public void incrementGreetingCount() {
+        greetingCount++;
+    }
+
+    // getGreetingCount()
+    public int getGreetingCount() {
+        return greetingCount;
+    }
+
+    // resetGreetingCount()
+    public void resetGreetingCount() {
+        greetingCount = 0;
+    }
 
 
 }
