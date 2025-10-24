@@ -60,7 +60,7 @@ public class Greetings {
 
     /** ===== PARAMETERIZED GREETINGS ====== */
 
-    public static void greetUser(String name) {
+    public void greetUser(String name) {
         System.out.println("Welcome, " + name + "!");
     }
 
@@ -166,6 +166,12 @@ public class Greetings {
         for (String name : names) {
             System.out.println("Hello, " + name + "!");
         }
+    }
+
+    // Create greeting method to be used in the GreetingsManager class
+    public void createGreeting(String message) {
+        System.out.println("Greeting created: " + message);
+        incrementGreetingCount();
     }
 
 }
