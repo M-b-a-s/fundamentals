@@ -10,14 +10,18 @@ public class Greetings {
         // sayGoodMorning("Bob");
         // sayGoodNight("Charlie");
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your name: ");
-        String name = scanner.next();
-        // greetUser(name);
-        String message = getGreeting(name);
-        System.out.println(message);
-        scanner.close();
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.print("Enter your name: ");
+        // String name = scanner.next();
+        // // greetUser(name);
+        // String message = getGreeting(name);
+        // System.out.println(message);
+        // scanner.close();
+
+        completeGreeting("Diana");
     }
+
+    /** ===== SIMPLE GREETINGS ===== */
 
     // say hello
     public static void sayHello(String name) {
@@ -34,6 +38,7 @@ public class Greetings {
         System.out.println("Good Night, " + name + "!");
     }
 
+    /** ===== PARAMETERIZED GREETINGS ====== */
 
     public static void greetUser(String name) {
         System.out.println("Welcome, " + name + "!");
@@ -42,5 +47,18 @@ public class Greetings {
     // get personalized greeting that returns a string
     public static String getGreeting(String name) {
         return "Hello, " + name + "! Welcome aboard.";
+    }
+
+    /** ===== METHOD CHAINING ===== */
+    // Create methods like startGreeting() and endGreeting(), and call them from another method completeGreeting().
+    public static void startGreeting(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+    public static void endGreeting(String name) {
+        System.out.println("Have a great day, " + name + "!");
+    }
+    public static void completeGreeting(String name) {
+        startGreeting(name);
+        endGreeting(name);
     }
 }
