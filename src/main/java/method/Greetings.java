@@ -18,7 +18,12 @@ public class Greetings {
         // System.out.println(message);
         // scanner.close();
 
-        completeGreeting("Diana");
+        // completeGreeting("Diana");
+
+        greet();
+        greet("Eve");
+        greet("Frank", "Afternoon");
+        greet("Grace", "Evening", "Wonderland");
     }
 
     /** ===== SIMPLE GREETINGS ===== */
@@ -61,4 +66,21 @@ public class Greetings {
         startGreeting(name);
         endGreeting(name);
     }
+
+    /** ===== OVERLOADED METHODS ===== */
+    // Write different versions of greet
+    public static void greet() {
+        System.out.println("Hello, Guest!");
+    }
+    public static void greet(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+    public static void greet(String name, String timeOfDay) {
+        System.out.println("Good " + timeOfDay + ", " + name + "!");
+    }
+    public static void greet(String name, String timeOfDay, String location) {
+        System.out.println("Good " + timeOfDay + ", " + name + "!");
+        System.out.println("You are welcome to " + location + ".");
+    }
+
 }
