@@ -160,4 +160,12 @@ public class Greetings {
         return greetings[index];
     }
 
+    /** ===== GROUP SETTINGS ===== */
+    // Write greetGroup(String[] names) to greet each name in a loop.
+    public static void greetGroup(String[] names) {
+        for (String name : names) {
+            System.out.println("Hello, " + name + "!");
+        }
+    }
+
 }
