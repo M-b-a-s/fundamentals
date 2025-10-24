@@ -20,10 +20,16 @@ public class Greetings {
 
         // completeGreeting("Diana");
 
-        greet();
-        greet("Eve");
-        greet("Frank", "Afternoon");
-        greet("Grace", "Evening", "Wonderland");
+        // greet();
+        // greet("Eve");
+        // greet("Frank", "Afternoon");
+        // greet("Grace", "Evening", "Wonderland");
+
+        int length = getGreetingLength("Hello, Henry! Welcome aboard.");
+        System.out.println("The length of the greeting is: " + length);
+
+        boolean isLong = isLongGreeting("Hello, this is a very long greeting message!");
+        System.out.println("Is the greeting long? " + isLong);
     }
 
     /** ===== SIMPLE GREETINGS ===== */
@@ -82,5 +88,15 @@ public class Greetings {
         System.out.println("Good " + timeOfDay + ", " + name + "!");
         System.out.println("You are welcome to " + location + ".");
     }
+
+    // a method(getGreetingLength) that returns an int
+    public static int getGreetingLength(String greeting) {
+        return greeting.length();
+    }
+
+    public static boolean isLongGreeting(String greeting) {
+        return greeting.length() > 20;
+    }
+
 
 }
