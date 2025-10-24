@@ -1,8 +1,12 @@
 package oop;
 
 public class Rectangle {
-    double length;
-    double width;
+    // Encapsulation: using private access modifier to restrict direct access to fields
+    // and using getters and setters to provide controlled access to fields
+
+    // Fields
+    private double length;
+    private double width;
 
     // constructor
     public Rectangle(double length, double width) {
@@ -10,30 +14,35 @@ public class Rectangle {
         this.width = width;
     }
 
+    // create constructor with no parameters
+    public Rectangle() {
+        this.length = 0;
+        this.width = 0;
+    }
     // getters and setters
-    double getLength() {
+    public double getLength() {
         return length;
     }
     // the 'this' keyword refers to the current object
     // it is used to distinguish between instance variables and parameters with the same name
     // in this case, it distinguishes between the instance variable 'length' and the parameter 'length'
-    void setLength(double length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
-    double getWidth() {
+    public double getWidth() {
         return width;
     }
-    void setWidth(double width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
-    double calculatePerimeter() {
+    public double calculatePerimeter() {
         return 2 * (length + width);
 
     }
 
-    double calculateArea() {
+    public double calculateArea() {
         return length * width;
     }
 

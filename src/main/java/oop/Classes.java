@@ -1,5 +1,7 @@
 package oop;
 
+import java.util.Scanner;
+
 /** Classes can be seen as blueprints for creating objects
  * They are used to create objects that have similar properties and behaviors.
  * OOP allows you to create objects that are similar to each other and can be used in different parts of your program.
@@ -13,5 +15,6 @@ package oop;
  * 
  */
 public class Classes {
+    
 
 }
