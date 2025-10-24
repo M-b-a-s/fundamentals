@@ -25,11 +25,14 @@ public class Greetings {
         // greet("Frank", "Afternoon");
         // greet("Grace", "Evening", "Wonderland");
 
-        int length = getGreetingLength("Hello, Henry! Welcome aboard.");
-        System.out.println("The length of the greeting is: " + length);
+        // int length = getGreetingLength("Hello, Henry! Welcome aboard.");
+        // System.out.println("The length of the greeting is: " + length);
 
-        boolean isLong = isLongGreeting("Hello, this is a very long greeting message!");
-        System.out.println("Is the greeting long? " + isLong);
+        // boolean isLong = isLongGreeting("Hello, this is a very long greeting message!");
+        // System.out.println("Is the greeting long? " + isLong);
+
+        String timeBasedGreeting = getGreetingBasedOnTime(10);
+        System.out.println(timeBasedGreeting);
     }
 
     /** ===== SIMPLE GREETINGS ===== */
@@ -97,6 +100,20 @@ public class Greetings {
     public static boolean isLongGreeting(String greeting) {
         return greeting.length() > 20;
     }
+
+    /** ===== TIME-BASED GREETING ===== */
+    // Write getGreetingBasedOnTime() that returns: “Good morning” if before 12:00 “Good afternoon” if 12–17 “Good evening” if after 17:00
+
+    public static String getGreetingBasedOnTime(int hour) {
+        if (hour < 12) {
+            return "Good morning";
+        } else if (hour <= 17) {
+            return "Good afternoon";
+        } else {
+            return "Good evening";
+        }
+    }
+
 
 
 }
