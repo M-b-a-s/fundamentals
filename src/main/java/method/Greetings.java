@@ -1,12 +1,22 @@
 package method;
 
+import java.util.Scanner;
+
 // import java.util.Scanner;
 
 public class Greetings {
     public static void main(String[] args) {
-        sayHello("Alice");
-        sayGoodMorning("Bob");
-        sayGoodNight("Charlie");
+        // sayHello("Alice");
+        // sayGoodMorning("Bob");
+        // sayGoodNight("Charlie");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.next();
+        // greetUser(name);
+        String message = getGreeting(name);
+        System.out.println(message);
+        scanner.close();
     }
 
     // say hello
@@ -25,5 +35,12 @@ public class Greetings {
     }
 
 
-    
+    public static void greetUser(String name) {
+        System.out.println("Welcome, " + name + "!");
+    }
+
+    // get personalized greeting that returns a string
+    public static String getGreeting(String name) {
+        return "Hello, " + name + "! Welcome aboard.";
+    }
 }
