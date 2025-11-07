@@ -9,8 +9,19 @@ package oop;
 
 public class Inheritance {
     public static void main(String[] args) {
-        Employee employee = new Employee();
-        employee.setName("John");
+        WeddingCake weddingCake = new WeddingCake();
+        weddingCake.flavor = "Chocolate";
+        weddingCake.price = 1000;
+
+        BirthdayCake birthdayCake = new BirthdayCake();
+        birthdayCake.flavor = "Vanilla";
+        birthdayCake.price = 2000;
+
+        System.out.println("Wedding Cake: " + weddingCake.flavor + " - " + weddingCake.price);
+
+        System.out.println("Birthday Cake: " + birthdayCake.flavor + " - " + birthdayCake.price);
+
+
     }
 
 }

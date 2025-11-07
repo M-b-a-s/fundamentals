@@ -5,6 +5,9 @@ public class Cake {
     protected String flavor;
     protected int price;
 
+    public Cake() {
+    }
+
     public Cake(String flavor) {
         this.flavor = flavor;
     }
